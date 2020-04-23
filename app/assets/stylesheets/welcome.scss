@@ -1,0 +1,112 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.welcome-splash {
+    background-image: url(app/assets/images/takeout.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+}
+.welcome-splash__caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    font-size: 5vw;
+    color: #E5E5E5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.row--red {
+    background-color: #FF6663;
+}
+.recipes__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.recipes-button {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #710000;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+.recipes-button:hover {
+    border-radius: 10px;
+    background-color: #197278;
+}
+
+//======================================
+
+.nav {
+  background-color: #ffae03;
+  margin: 0;
+}
+.nav__home {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  transition: 0.5s ease;
+}
+.nav__home:hover {
+  color: white;
+}
+.nav__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav__logo {
+  height: 50px;
+  padding: 10px;
+}
+.nav__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//======================================
+
+.about__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.about__logo {
+    margin: 15px 0;
+}
+.about__text {
+    margin: 0 5px;
+    width: 80%;
+}
+@media srceen and (max-width: 540px) {
+    .about__content {
+        flex-wrap: wrap;
+        width: 50%;
+    }
+}
+//======================================
