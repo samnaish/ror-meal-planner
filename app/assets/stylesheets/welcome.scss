@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .welcome-splash {
-    background-image: url(app/assets/images/takeout.jpg);
+    background-image: url('food/takeout.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -12,7 +12,7 @@
     width: 100%;
     height: 400px;
 }
-.welcome-splash__caption {
+.welcome-splash__text {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 10px;
     font-size: 5vw;
@@ -90,9 +90,32 @@
 
 //======================================
 
+.nav__links {
+  list-style: none;
+}
+
+.nav__link {
+  float: left;
+  padding: 0 5px;
+}
+
+.nav__anchor:hover {
+  color: black;
+  background-color: #fff;
+}
+
+.nav__anchor {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: inline-block;
+}
+
+//======================================
+
 .about__content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -109,4 +132,72 @@
         width: 50%;
     }
 }
+//======================================
+
+.how {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  width: 50%;
+  outline: 1px solid black;
+  padding: 10px;
+}
+.how__subtitle {
+  font-size: 24px;
+  margin: 10px;
+}
+.how__img {
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  object-fit: cover;
+  padding: 10px;
+}
+.how__caption {
+  text-align: center;
+}
+
+//======================================
+
+.heading {
+  display: block;
+  font-size: 26px;
+  padding: 10px;
+  text-align: center;
+  margin: 25px 0;
+}
+.heading::before, .heading::after {
+  content: '';
+  border: 1px solid black;
+}
+.heading::before {
+  margin-right: 10px;
+}
+.heading::after {
+  margin-left: 10px;
+}
+
+//======================================
+
+.footer {
+  background-color: #7c7287;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__anchor {
+  text-decoration: none;
+  color: black;
+}
+.footer__anchor:hover {
+  color: darkgrey;
+}
+
+//======================================
+
+
+
 //======================================
