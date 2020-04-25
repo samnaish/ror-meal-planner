@@ -27,6 +27,7 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    padding-top: 10px;
 }
 .row--red {
     background-color: #FF6663;
@@ -118,6 +119,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 80vh;
 }
 .about__logo {
     margin: 15px 0;
@@ -166,7 +168,7 @@
   font-size: 26px;
   padding: 10px;
   text-align: center;
-  margin: 25px 0;
+  margin: 5px 0 20px 0;
 }
 .heading::before, .heading::after {
   content: '';
@@ -187,6 +189,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 12px 0;
 }
 .footer__anchor {
   text-decoration: none;
@@ -198,6 +201,116 @@
 
 //======================================
 
-
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search__bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search__bar {
+  display: inline-block;
+  padding: 10px;
+  width: 50%;
+  margin: 10px auto;
+}
+.search__button {
+  display: block;
+  border: none;
+  color: white;
+  text-decoration: none;
+  width: 200px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #710000;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+.search__button:hover {
+  border-radius: 10px;
+  background-color: #197278;
+}
 
 //======================================
+
+.alert-success {
+  padding: 10px 0 0 0;
+  text-align: center;
+  background-color: #ffae03;
+}
+
+//======================================
+
+.reason {
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  width: 33%;
+}
+.reason__title {
+  text-align: center;
+}
+.reason__caption {
+  text-align: center;
+}
+.reason__img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+//======================================
+
+.signup-page {
+  background-image: url('food/ingredients.jpg');
+  box-shadow: 0 3000px rgba(10, 0, 10, 0.3) inset;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  max-height: 800px;
+  width: 100%;
+}
+
+.signup {
+  background-color: #F5853F;
+  width: 400px;
+  margin: 20px auto;
+  padding: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 5px;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//======================================
+
+.login-page {
+  background-image: url('food/selectionbox.jpg');
+  box-shadow: 0 3000px rgba(100, 20, 0, 0.3) inset;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  max-height: 800px;
+  width: 100%;
+}
