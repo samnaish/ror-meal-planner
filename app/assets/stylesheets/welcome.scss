@@ -168,7 +168,7 @@
   font-size: 26px;
   padding: 10px;
   text-align: center;
-  margin: 5px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 .heading::before, .heading::after {
   content: '';
@@ -179,24 +179,6 @@
 }
 .heading::after {
   margin-left: 10px;
-}
-
-//======================================
-
-.footer {
-  background-color: #7c7287;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
-}
-.footer__anchor {
-  text-decoration: none;
-  color: black;
-}
-.footer__anchor:hover {
-  color: darkgrey;
 }
 
 //======================================
@@ -285,7 +267,7 @@
   width: 100%;
 }
 
-.signup {
+.signup__form-outline {
   background-color: #F5853F;
   width: 400px;
   margin: 20px auto;
@@ -314,3 +296,40 @@
   max-height: 800px;
   width: 100%;
 }
+
+.login__form-outline{
+  background-color: #F5853F;
+  width: 500px;
+  margin: 20px auto;
+  padding: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 10px;
+  }
+
+//======================================
+
+
+
+//======================================
+
+
+
+//======================================
+
+.footer {
+  background-color: #7c7287;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+.footer__anchor {
+  text-decoration: none;
+  color: black;
+}
+.footer__anchor:hover {
+  color: darkgrey;
+}
+
+//======================================
