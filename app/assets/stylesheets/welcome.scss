@@ -308,7 +308,66 @@
 
 //======================================
 
+.fields__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 10px;
+}
 
+.field {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.fields__left, .fields__right {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.field__input {
+  display: block;
+  margin: 5px auto;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  height: 36px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #EFE7DA;
+  border: none;
+  border-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.actions__button {
+  padding: 15px 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(41, 115, 115);
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.actions__button:hover{
+  opacity: 0.8;
+  background-color: #615d6c;
+}
 
 //======================================
 

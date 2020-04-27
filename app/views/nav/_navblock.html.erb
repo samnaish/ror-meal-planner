@@ -8,7 +8,7 @@
       <li class="nav__link"><a class="nav__anchor" href="/about">About</a></li>
       <li class="nav__link"><a class="nav__anchor" href="/search">Search</a></li>
       <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>.
+        Logged in as <strong><%= current_user.username %></strong>.
         <%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav__anchor' %> |
         <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav__anchor'  %>
       <% else %>
