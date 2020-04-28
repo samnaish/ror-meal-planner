@@ -46,16 +46,19 @@
       </div>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Update", class: "actions__button" %>
+    <div class="update">
+      <%= f.submit "Update", class: "update__button" %>
     </div>
+
   <% end %>
+  <h3 class="heading">Cancel my account</h3>
+  <div class="cancel__container">
+    <div class="cancel">
+      <p class="cancel__label">Unhappy with your account? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "cancel__button" %></p>
+    </div>
+  </div>
 
-  <h3>Cancel my account</h3>
-
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-  <%= link_to "Back", :back %>
+    <%= link_to "Back to Home page", :back, class: "back-link" %>
   </main>
   <%= render 'footer/label' %>
 </div>

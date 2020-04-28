@@ -320,10 +320,10 @@
 .field {
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
+  box-shadow: 10px 5px 5px rgb(216, 216, 216);
 }
 
 .fields__left, .fields__right {
@@ -345,14 +345,16 @@
   border-radius: 5px;
 }
 
-.actions {
+//======================================
+
+.update {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 10px;
 }
 
-.actions__button {
+.update__button {
   padding: 15px 50px;
   border: none;
   border-radius: 5px;
@@ -364,11 +366,67 @@
   transition: background-color 0.3s ease 0s;
 }
 
-.actions__button:hover{
+.update__button:hover{
   opacity: 0.8;
   background-color: #615d6c;
 }
 
+//======================================
+
+.cancel__label {
+  margin: 5px 0;
+  color: white;
+}
+
+.cancel__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #dc0000;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px rgb(216, 216, 216);
+    width: 90%;
+}
+
+.cancel__button {
+  border-radius: 5px;
+  border: none;
+  color:rgba(232, 0, 18, 0.89);
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+.cancel__button:hover {
+  color: white;
+  background-color: #dc0000;
+  border: 1px solid white;
+}
+
+//======================================
+
+.back-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #222;
+  transition: border 0.3s ease;
+}
+
+.back-link:hover {
+  color: #0E4749;
+}
 //======================================
 
 
