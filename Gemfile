@@ -54,3 +54,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+gem 'sidekiq', '~> 5.2', '>= 5.2.7'
+group :development, :test do
+  gem 'better_errors'
+end
