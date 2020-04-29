@@ -1,0 +1,12 @@
+<div class="app-container">
+  <main class="content">
+  <%= render 'nav/navblock' %>
+    <h1>Recipes</h1>
+    <div class=""recipes>
+      <% @recipe.each do |recipe| %>
+        <h3><%= lint_to recipe.name, recipe_path(recipe) %></h3>
+      <% end %>
+    </div>
+    <%= render 'footer/label' %>
+  </main>
+</div>

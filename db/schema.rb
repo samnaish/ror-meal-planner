@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_04_26_135107) do
 
-  create_table "recipes", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
