@@ -1,7 +1,8 @@
 <div class="app-container">
   <main class="content">
   <%= render 'nav/navblock' %>
-    <%= render 'form' %>
+    <%= render 'form', recipe: @recipe%>
+    <%= link_to 'Back', recipes_path %>
   <%= render 'footer/label' %>
   </main>
 </div>
