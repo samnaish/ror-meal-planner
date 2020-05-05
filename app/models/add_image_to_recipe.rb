@@ -1,0 +1,2 @@
+class AddImageToRecipe < ApplicationRecord
+end

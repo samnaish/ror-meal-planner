@@ -271,7 +271,6 @@ DEPENDENCIES
   cocoon
   devise
   friendly_id (~> 5.2, >= 5.2.5)
-  image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   nested_form_fields
