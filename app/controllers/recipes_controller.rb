@@ -17,36 +17,23 @@ class RecipesController < ApplicationController
 
    def create
     @recipe = Recipe.new(recipe_params)
-
-    respond_to do |format|
-      if @recipe.save
-        format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
-        format.json { render :show, status: :created, location: @recipe }
-      else
-        format.html { render :new }
-        format.json { render json: @recipe.errors, status: :unprocessable_entity }
-      end
+    if @recipe.save
+      redirect_to @recipe, notice: "Successfully created"
+    else
+      render 'new'
     end
   end
 
  def update
-    respond_to do |format|
       if @recipe.update(recipe_params)
-        format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
-        format.json { render :show, status: :ok, location: @recipe }
-      else
-        format.html { render :edit }
-        format.json { render json: @recipe.errors, status: :unprocessable_entity }
-      end
-    end
+      redirect_to @recipe
+    else
+      render 'edit'
+		end
   end
 
    def destroy
     @recipe.destroy
-    respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
 	private
@@ -55,7 +42,9 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:remove_image, :image, :title, :description, ingredients_attributes:[:id, :content, :_destroy], steps_attributes:[:id, :direction, :_destroy])
+      params.require(:recipe).permit(
+        :title, :description,
+        :ingredients_attributes => [:id, :content, :_destroy])
     end
 
 end
