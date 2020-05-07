@@ -1,13 +1,13 @@
 <div class="app-container">
   <main class="content">
   <%= render 'nav/navblock' %>
-    <%= form_with(model: @recipe, local: true) do |form| %>
-  <% if recipe.errors.any? %>
+    <%= form_for(@recipe) do |form| %>
+  <% if @recipe.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this @recipe from being saved:</h2>
 
       <ul>
-        <% recipe.errors.full_messages.each do |message| %>
+        <% @recipe.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -15,38 +15,29 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
- </div>
+
   <h3>Add Ingredients</h3>
-     <%= form.fields_for :ingredients do |ingredient| %>
-      <div class="nested-fields">
-        <div class="field">
-          <%= f.label :content %>
-          <%= f.text_field :content %>
-          <%= link_to_remove_association "Remove Ingredient", f %>
-        </div><!-- field -->
+  <div id="ingredients">
+    <%= form.fields_for :ingredients do |ingredient| %>
+      <%= render 'ingredient_fields', form: ingredient %>
+      <div class="links">
+        <%= link_to_add_association 'Add Ingredient', form, :ingredients %>
       </div>
     <% end %>
-    <div class="links">
-     <%= link_to_add_association 'Add Ingredient', form, :ingredients %>
-   </div>
+    </div>
+ </div>
 
    <h3>Add Steps</h3>
      <%= form.fields_for :steps do |step| %>
-      <div class="nested-fields">
-        <div class="field">
-          <%= f.label :direction %>
-          <%= f.text_field :direction %>
-          <%= link_to_remove_association "Remove Step", f %>
-        </div>
-      </div>
+      <% render 'step_fields', form: step %>
     <% end %>
     <div class="links">
      <%= link_to_add_association 'Add Step', form, :steps %>
@@ -56,7 +47,6 @@
     <%= form.submit %>
   </div>
 <% end %>
-<%= render 'recipes/form', recipe: @recipe%>
     <%= link_to 'Back', recipes_path %>
   <%= render 'footer/label' %>
   </main>
