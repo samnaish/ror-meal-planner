@@ -1,0 +1,17 @@
+<div class="app-container">
+  <main class="content">
+    <%= render 'nav/navblock' %>
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Name:</strong>
+      <%= @recipe.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @recipe.description %>
+    </p>
+
+    <%= render 'footer/label' %>
+  </main>
+</div>
