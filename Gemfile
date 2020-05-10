@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 gem 'devise'
 gem "cocoon"
+gem 'jquery-rails', '4.3.5'
 gem 'nested_form_fields'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'

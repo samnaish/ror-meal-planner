@@ -272,6 +272,7 @@ DEPENDENCIES
   devise
   friendly_id (~> 5.2, >= 5.2.5)
   jbuilder (~> 2.7)
+  jquery-rails (= 4.3.5)
   listen (>= 3.0.5, < 3.2)
   nested_form_fields
   puma (~> 4.1)

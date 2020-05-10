@@ -1,7 +1,7 @@
 <div class="app-container">
   <main class="content">
   <%= render 'nav/navblock' %>
-    <%= form_for(@recipe) do |form| %>
+  <%= form_for(@recipe) do |form| %>
   <% if @recipe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this @recipe from being saved:</h2>
@@ -27,19 +27,19 @@
   <div id="ingredients">
     <%= form.fields_for :ingredients do |ingredient| %>
       <%= render 'ingredient_fields', form: ingredient %>
-      <div class="links">
-        <%= link_to_add_association 'Add Ingredient', form, :ingredient %>
-      </div>
     <% end %>
+    <div class="links">
+      <%= link_to_add_association 'Add Ingredient', form, :ingredients, form_name: 'form' %>
+    </div>
     </div>
  </div>
 
-   <h3>Add Steps</h3>
-     <%= form.fields_for :steps do |step| %>
+  <h3>Add Steps</h3>
+    <%= form.fields_for :steps do |step| %>
       <% render 'step_fields', form: step %>
     <% end %>
     <div class="links">
-     <%= link_to_add_association 'Add Step', form, :steps %>
+     <%= link_to_add_association 'Add Step', form, :steps, form_name: 'form' %>
    </div>
 
   <div class="actions">
