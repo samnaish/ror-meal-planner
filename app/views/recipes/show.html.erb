@@ -12,6 +12,20 @@
       <%= @recipe.description %>
     </p>
 
+    <h3>Steps</h3>
+    <ul>
+      <% for @step in @recipe.steps %>
+        <li><%= @step.direction %></li>
+      <% end %>
+    </ul>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <% for @ingredient in @recipe.ingredients %>
+        <li><%= @ingredient.content %></li>
+      <% end %>
+    </ul>
+    <%= link_to 'Back', recipes_path %>
     <%= render 'footer/label' %>
   </main>
 </div>
