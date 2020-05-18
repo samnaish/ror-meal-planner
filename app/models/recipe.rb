@@ -6,7 +6,7 @@ class Recipe < ApplicationRecord
 	accepts_nested_attributes_for :steps, reject_if: :all_blank, allow_destroy: true
 
 	def self.search(search)
-		where("name LIKE ? OR ingredients LIKE ? ", "%#{search}%", "%#{search}%")
+		where("name LIKE ?", "%#{search}%")
 	end
 
 end
