@@ -4,8 +4,13 @@
     <div class="search">
       <h2 class="heading">Search for a recipe</h2>
       <div class="search__bar-container">
-        <%= render :partial => "search/form", locals: {recipe: @recipe} %>
+        <%= render :partial => "search/form"%>
       </div>
+      <% if @recipes %>
+        <% @recipes.each do |recipe|%>
+          <%= link_to recipe.name %>
+        <% end %>
+      <% end %>
     </div>
     <%= render 'footer/label' %>
   </main>

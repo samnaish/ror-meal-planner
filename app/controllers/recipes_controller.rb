@@ -6,7 +6,9 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.where("name LIKE ?", "%" + search_params[:search] + "%")
+    if request.query_parameters[:search]
+      @recipes = Recipe.where("name LIKE ?", "%" + request.query_parameters[:search] + "%")
+    end
   end
 
   def show
@@ -52,8 +54,6 @@ class RecipesController < ApplicationController
         :steps_attributes => [:id, :direction, :_destroy])
     end
 
-    def search_params
-      params.permit(:recipe, :search).permit(:name, :id)
-    end
+
 
 end
