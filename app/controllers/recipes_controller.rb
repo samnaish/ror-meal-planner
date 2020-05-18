@@ -6,12 +6,7 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.all
-    if params[:search]
-      @recipes = Recipe.search(params[:search]).order("created_at DESC")
-    else
-      @recipes = Recipe.all.order("created_at DESC")
-    end
+    @recipes = Recipe.where("name LIKE ?", "%" + search_params[:search] + "%")
   end
 
   def show
@@ -58,7 +53,7 @@ class RecipesController < ApplicationController
     end
 
     def search_params
-      params.permit(:recipe).permit(:name, :id, :search)
+      params.permit(:recipe, :search).permit(:name, :id)
     end
 
 end
