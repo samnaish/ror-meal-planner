@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   get 'about', to: 'welcome#about', as: 'about'
-  get 'search', to: 'welcome#search', as: 'search'
+  get 'search', to: 'recipes#search', as: 'search'
 
   resources :recipes
 

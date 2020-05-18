@@ -4,11 +4,7 @@
     <div class="search">
       <h2 class="heading">Search for a recipe</h2>
       <div class="search__bar-container">
-        <%= form_tag "/search", :method => "get" do %>
-          <%= label_tag(:search) %>
-          <%= text_field_tag :search, params[:search], :class => 'search__bar' %>
-          <%= submit_tag("Search", :name => nil), :class => 'search__button'  %>
-        <% end %>
+        <%= render :partial => "search/form", locals: {recipe: @recipe} %>
       </div>
       <% @recipe.each do |recipe| %>
         <h3><%= recipe.name %></h3>
