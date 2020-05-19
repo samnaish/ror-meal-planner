@@ -22,7 +22,7 @@
     <h3>Ingredients</h3>
     <ul>
       <% for @ingredient in @recipe.ingredients %>
-        <li><%= @ingredient.content %></li>
+        <li><%="#{@ingredient.quantity}#{@ingredient.unit} #{@ingredient.content}"%></li>
       <% end %>
     </ul>
     <%= link_to 'Back', recipes_path %>
