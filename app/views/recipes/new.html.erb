@@ -41,11 +41,6 @@
      <%= link_to_add_association 'Add Step', form, :steps, form_name: 'form' %>
    </div>
 
-    <div class="field">
-      <%= form.label "Measuremnent", class: 'field__label'%>
-      <%= form.collection_select(:recipe_id, Recipe::MEASUREMENTS, :id) %>
-    </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
