@@ -40,6 +40,7 @@ class RecipesController < ApplicationController
 
    def destroy
     @recipe.destroy
+    redirect_to root_path, notice: "succesfully deleted recipe"
   end
 
 	private
