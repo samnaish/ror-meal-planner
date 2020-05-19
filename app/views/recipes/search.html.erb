@@ -8,7 +8,7 @@
       </div>
       <% if @recipes %>
         <% @recipes.each do |recipe|%>
-          <%= link_to recipe.name %>
+          <%= link_to recipe.name, recipe %>
         <% end %>
       <% end %>
     </div>
