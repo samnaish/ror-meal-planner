@@ -20,11 +20,11 @@
     </ol>
 
     <h3>Ingredients</h3>
-    <ul>
+    <ol>
       <% for @ingredient in @recipe.ingredients %>
-        <li><%="#{@ingredient.quantity}#{@ingredient.unit} #{@ingredient.content}"%></li>
+        <li><%="#{@ingredient.quantity} #{@ingredient.unit} #{@ingredient.content}"%></li>
       <% end %>
-    </ul>
+    </ol>
     <%= link_to 'Back', recipes_path %>
     <%= render 'footer/label' %>
   </main>
