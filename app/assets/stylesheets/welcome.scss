@@ -1,58 +1,59 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$basic-white: white;
 
 .welcome-splash {
-    background-image: url('food/takeout.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 400px;
+  background-image: url('food/takeout.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
 }
 .welcome-splash__text {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    font-size: 5vw;
-    color: #E5E5E5;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-size: 5vw;
+  color: #E5E5E5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 20px;
 }
 .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 10px;
 }
 .row--red {
-    background-color: #FF6663;
+  background-color: #FF6663;
 }
 .recipes__button-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .recipes-button {
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 200px;
-    margin: 10px auto;
-    text-align: center;
-    background-color: #710000;
-    padding: 10px;
-    transition: 0.3s ease;
+  display: block;
+  color: $basic-white;
+  text-decoration: none;
+  width: 200px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #710000;
+  padding: 10px;
+  transition: 0.3s ease;
 }
 .recipes-button:hover {
-    border-radius: 10px;
-    background-color: #197278;
+  border-radius: 10px;
+  background-color: #197278;
 }
 
 //======================================
@@ -76,15 +77,15 @@
 }
 
 .dish__image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
 }
 
 strong {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 //======================================
@@ -100,7 +101,7 @@ strong {
   transition: 0.5s ease;
 }
 .nav__home:hover {
-  color: white;
+  color: $basic-white;
 }
 .nav__title {
   display: flex;
@@ -147,23 +148,23 @@ strong {
 //======================================
 
 .about__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
 .about__logo {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 .about__text {
-    margin: 0 5px;
-    width: 80%;
+  margin: 0 5px;
+  width: 80%;
 }
 @media srceen and (max-width: 540px) {
     .about__content {
-        flex-wrap: wrap;
-        width: 50%;
+      flex-wrap: wrap;
+      width: 50%;
     }
 }
 //======================================
@@ -235,7 +236,7 @@ strong {
 .search__button {
   display: block;
   border: none;
-  color: white;
+  color: $basic-white;
   text-decoration: none;
   width: 200px;
   margin: 10px auto;
@@ -334,7 +335,7 @@ strong {
   width: 45%;
   height: 36px;
   background-color: #297373;
-  color: white;
+  color: $basic-white;
   text-decoration: none;
   border: none;
   font-size: 14px;
@@ -434,7 +435,7 @@ strong {
   border: none;
   border-radius: 5px;
   background-color: rgb(41, 115, 115);
-  color: white;
+  color: $basic-white;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
@@ -450,7 +451,7 @@ strong {
 
 .cancel__label {
   margin: 5px 0;
-  color: white;
+  color: $basic-white;
 }
 
 .cancel__container {
@@ -461,16 +462,16 @@ strong {
 }
 
 .cancel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #dc0000;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px rgb(216, 216, 216);
-    width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #dc0000;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px rgb(216, 216, 216);
+  width: 90%;
 }
 
 .cancel__button {
@@ -482,9 +483,9 @@ strong {
 }
 
 .cancel__button:hover {
-  color: white;
+  color: $basic-white;
   background-color: #dc0000;
-  border: 1px solid white;
+  border: 1px solid $basic-white;
 }
 
 //======================================
@@ -507,9 +508,12 @@ strong {
 
 
 //======================================
+$footer-color: #7c7287;
+$footer-anchor-color: black;
+$footer-anchover-color: darkgrey;
 
 .footer {
-  background-color: #7c7287;
+  background-color: $footer-color;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -518,10 +522,10 @@ strong {
 }
 .footer__anchor {
   text-decoration: none;
-  color: black;
+  color: $footer-anchor-color;
 }
 .footer__anchor:hover {
-  color: darkgrey;
+  color: $footer-anchover-color;
 }
 
 //======================================
