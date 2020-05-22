@@ -6,11 +6,13 @@
       <div class="search__bar-container">
         <%= render :partial => "search/form"%>
       </div>
-      <% if @recipes %>
-        <% @recipes.each do |recipe|%>
-          <%= link_to recipe.name, recipe %>
+      <div class="recipes__results-container">
+        <% if @recipes %>
+          <% @recipes.each do |recipe|%>
+            <%= link_to recipe.name, recipe, class: 'search__result-item' %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
     <%= render 'footer/label' %>
   </main>

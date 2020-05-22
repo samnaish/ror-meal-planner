@@ -230,8 +230,10 @@ strong {
 .search__bar {
   display: inline-block;
   padding: 10px;
-  width: 50%;
+  width: 100%;
   margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #949393;
 }
 .search__button {
   display: block;
@@ -248,6 +250,28 @@ strong {
 .search__button:hover {
   border-radius: 10px;
   background-color: #197278;
+}
+
+.recipes__results-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+  padding: 5px 0;
+}
+
+.search__result-item {
+  text-decoration: none;
+  color: #222;
+  padding: 2px 2px;
+  margin: 2px 0;
+  border-radius: 5px;
+  max-width: 25%;
+  transition: 0.3s ease;
+}
+
+.search__result-item:hover {
+  background-color: #949393;
+  color: #1d1c0d;
 }
 
 //======================================
