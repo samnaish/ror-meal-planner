@@ -11,8 +11,8 @@
               <p class="recipe__item-description"><%= recipe.description %></p>
             </div>
             <div class="recipe__links">
-              <%= link_to 'Edit', edit_recipe_path(recipe) %>
-              <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Edit this recipe', edit_recipe_path(recipe), class: "recipe__link" %>
+              <%= link_to 'Delete this recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "recipe__link" %>
             </div>
           </div>
         <% end %>
