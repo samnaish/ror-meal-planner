@@ -56,7 +56,7 @@ $basic-text-color: #222;
 .recipe__links {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .recipe__link {
@@ -95,6 +95,74 @@ $basic-text-color: #222;
     min-height: 70px;
     resize: none;
     outline: none;
+    width: 100%;
+    margin: 4px;
+    min-width: 200px;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
 //===============================================
+
+
+.edit_recipe {
+    border: 1px solid deeppink;
+    display: block;
+    margin: 10px auto;
+    background-color: #F5853F;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.field__name {
+    margin: 4px;
+    display: block;
+    font-weight: 500;
+    height: 30px;
+    width: 100%;
+    min-width: 200px;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.field__measure-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid deeppink;
+    text-decoration: none;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(255, 68, 68);
+    color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+}
+
+.delete__container {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+}

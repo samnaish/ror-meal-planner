@@ -3,13 +3,17 @@
     <%= form.label :content %>
     <%= form.text_field :content, class: 'field__content' %>
   </div>
-  <div class="field">
-    <%= form.label "Unit", class: 'field__label'%>
-    <%= form.select(:unit, options_for_select([["", ""], ["clove", "clove"], ["Grams", "Grams"], ["ML", "ML"], ["TSP", "TSP"]])) %>
+  <div class="field__measure-container">
+    <div class="field">
+      <%= form.label "Unit", class: 'field__label'%>
+      <%= form.select(:unit, options_for_select([["", ""], ["clove", "clove"], ["Grams", "Grams"], ["ML", "ML"], ["TSP", "TSP"]])) %>
+    </div>
+    <div class="field">
+      <%= form.label "Quantity", class: 'field__label'%>
+      <%= form.number_field(:quantity, min: 1) %>
+    </div>
+    <div class="delete__container">
+      <%= link_to_remove_association "X", form, form_name: 'form', class: 'delete' %>
+    </div>
+    </div>
   </div>
-  <div class="field">
-    <%= form.label "Quantity", class: 'field__label'%>
-    <%= form.number_field(:quantity, min: 1) %>
-  </div>
-  <%= link_to_remove_association "Remove Ingredient", form, form_name: 'form' %>
-</div>

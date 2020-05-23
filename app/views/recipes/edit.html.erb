@@ -1,7 +1,7 @@
 <div class="app-container">
   <main class="content">
   <%= render 'nav/navblock' %>
-  <h1>Editing Recipe</h1>
+  <h1 class="heading">Editing Recipe</h1>
   <%= form_for(@recipe) do |form| %>
   <% if @recipe.errors.any? %>
     <div id="error_explanation">
@@ -16,12 +16,12 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "field__name" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: 'field__textarea' %>
   </div>
 
   <h3>Add Ingredients</h3>
