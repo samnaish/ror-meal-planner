@@ -10,10 +10,6 @@
               <h3 class="recipe__item-name"><%= link_to recipe.name, recipe, class: "recipe__name-link" %></h3>
               <p class="recipe__item-description"><%= recipe.description %></p>
             </div>
-            <div class="recipe__links">
-              <%= link_to 'Edit this recipe', edit_recipe_path(recipe), class: "recipe__link" %>
-              <%= link_to 'Delete this recipe', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "recipe__link" %>
-            </div>
           </div>
         <% end %>
       </div>

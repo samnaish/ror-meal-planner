@@ -19,7 +19,11 @@
       <div class="dish__info">
         Serves <strong>6</strong>
         <div>
+        <% if user_signed_in? %>
           <%= link_to 'Submit a Recipe', new_recipe_path, class: "recipes-button" %>
+        <%else%>
+          <p>login to view more recipes</p>
+        <%end%>
         </div>
       </div>
     </div>

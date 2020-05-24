@@ -25,6 +25,10 @@
         <li><%="#{@ingredient.quantity} #{@ingredient.unit} #{@ingredient.content}"%></li>
       <% end %>
     </ol>
+    <div class="recipe__links">
+      <%= link_to 'Edit this recipe', edit_recipe_path(@recipe), class: "recipe__link" %>
+      <%= link_to 'Delete this recipe', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "recipe__link" %>
+    </div>
     <%= link_to 'Back', recipes_path %>
     <%= render 'footer/label' %>
   </main>
