@@ -2,6 +2,13 @@
   <main class="content">
     <%= render 'nav/navblock' %>
     <p id="notice"><%= notice %></p>
+
+    <% if @recipe.image%>
+      <%= image_tag @recipe.image %>
+    <% else %>
+      <%= image_tag "placeholder/placeholder.png" %>
+    <% end %>
+
     <p>
       <strong>Name:</strong>
       <%= @recipe.name %>
