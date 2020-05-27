@@ -4,7 +4,7 @@
     <p id="notice"><%= notice %></p>
 
     <% if @recipe.image%>
-      <%= image_tag @recipe.image %>
+      <%= image_tag @recipe.image.thumb.url %>
     <% else %>
       <%= image_tag "placeholder/placeholder.png" %>
     <% end %>
