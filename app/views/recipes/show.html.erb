@@ -3,11 +3,9 @@
     <%= render 'nav/navblock' %>
     <p id="notice"><%= notice %></p>
 
-    <% if @recipe.image%>
-      <%= image_tag @recipe.image.thumb.url %>
-    <% else %>
-      <%= image_tag "placeholder/placeholder.png" %>
-    <% end %>
+
+    <%= image_tag @recipe.image.url %>
+
 
     <p>
       <strong>Name:</strong>
