@@ -166,3 +166,38 @@ $basic-text-color: #222;
     margin: 0 5px;
     border-radius: 5px;
 }
+ //==============================================
+
+ .recipe__info-container {
+    border: 1px solid deeppink;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.recipe__description-container {
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 0px 10px;
+}
+
+.recipe__ingredientsmethod-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.recipe__steps-box {
+    border: 1px solid orange;
+    max-width: 60%;
+    padding: 5px;
+}
+
+.recipe__ingredient-box {
+    border: 1px solid red;
+}

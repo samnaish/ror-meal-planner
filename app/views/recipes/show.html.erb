@@ -2,39 +2,45 @@
   <main class="content">
     <%= render 'nav/navblock' %>
     <p id="notice"><%= notice %></p>
+  <div class="recipe">
+    <h1 class="heading"><%= @recipe.name %></h1>
 
+    <div class="recipe__info-container">
+      <%= image_tag @recipe.image.url %>
+      <div class="recipe__description-container">
+        <h3>Description:</h3>
+        <p><%= @recipe.description %></p>
+      </div>
+    </div>
 
-    <%= image_tag @recipe.image.url %>
+    <div class="recipe__ingredientsmethod-container">
+      <div class="recipe__steps-box">
+        <h3>Steps</h3>
+        <ol class="recipe__step-list">
+          <% for @step in @recipe.steps %>
+            <li class="recipe__step-listItem"><%= @step.direction %></li>
+          <% end %>
+        </ol>
+      </div>
 
+      <div class="recipe__ingredient-box">
+        <h3>Ingredients</h3>
+        <ol>
+          <% for @ingredient in @recipe.ingredients %>
+            <li><%="#{@ingredient.quantity} #{@ingredient.unit} #{@ingredient.content}"%></li>
+          <% end %>
+        </ol>
+      </div>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @recipe.name %>
-    </p>
+    </div>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @recipe.description %>
-    </p>
-
-    <h3>Steps</h3>
-    <ol>
-      <% for @step in @recipe.steps %>
-        <li><%= @step.direction %></li>
-      <% end %>
-    </ol>
-
-    <h3>Ingredients</h3>
-    <ol>
-      <% for @ingredient in @recipe.ingredients %>
-        <li><%="#{@ingredient.quantity} #{@ingredient.unit} #{@ingredient.content}"%></li>
-      <% end %>
-    </ol>
     <div class="recipe__links">
       <%= link_to 'Edit this recipe', edit_recipe_path(@recipe), class: "recipe__link" %>
       <%= link_to 'Delete this recipe', @recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "recipe__link" %>
     </div>
+
     <%= link_to 'Back', recipes_path %>
-    <%= render 'footer/label' %>
+  </div>
+  <%= render 'footer/label' %>
   </main>
 </div>
