@@ -25,9 +25,9 @@
 
       <div class="recipe__ingredient-box">
         <h3>Ingredients</h3>
-        <ol>
+        <ol class="recipe__ingredient-list">
           <% for @ingredient in @recipe.ingredients %>
-            <li><%="#{@ingredient.quantity} #{@ingredient.unit} #{@ingredient.content}"%></li>
+            <li class="recipe__ingredient-listItem"><%="#{@ingredient.quantity} #{@ingredient.unit} #{@ingredient.content}"%></li>
           <% end %>
         </ol>
       </div>

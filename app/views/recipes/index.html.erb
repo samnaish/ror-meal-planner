@@ -8,7 +8,7 @@
           <div class="recipe__item">
             <div class="recipe__item-info">
               <h3 class="recipe__item-name"><%= link_to recipe.name, recipe, class: "recipe__name-link" %></h3>
-              <p class="recipe__item-description"><%= recipe.description %></p>
+              <p class="recipe__item-description"><%= truncate(recipe.description, length: 65 ) %></p>
             </div>
           </div>
         <% end %>
