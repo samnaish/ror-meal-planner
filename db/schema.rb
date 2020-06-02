@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_27_134816) do
+ActiveRecord::Schema.define(version: 2020_06_02_113850) do
 
   create_table "ingredients", force: :cascade do |t|
     t.text "content"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 2020_05_27_134816) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
     t.string "string"
+    t.string "time"
+    t.string "integer"
+    t.string "timeGroup"
   end
 
   create_table "steps", force: :cascade do |t|
