@@ -29,6 +29,12 @@
     <%= form.text_area :description, class: 'field__textarea' %>
   </div>
 
+  <div class="field">
+    <%= form.label "Prep-time" %>
+    <%= form.number_field(:time, min: 1) %>
+    <%= form.select(:timeGroup, options_for_select([["", ""], ["minute(s)", "minute(s)"], ["hour(s)", "hour(s)"]])) %>
+  </div>
+
   <h3>Add Ingredients</h3>
   <div id="ingredients">
     <%= form.fields_for :ingredients do |ingredient| %>
