@@ -35,6 +35,12 @@
     <%= form.select(:timeGroup, options_for_select([["", ""], ["minute(s)", "minute(s)"], ["hour(s)", "hour(s)"]])) %>
   </div>
 
+  <div class="field">
+    <%= form.label "Cook-time" %>
+    <%= form.number_field(:cooktime, min: 1) %>
+    <%= form.select(:cooktimeGroup, options_for_select([["", ""], ["minute(s)", "minute(s)"], ["hour(s)", "hour(s)"]])) %>
+  </div>
+
   <h3>Add Ingredients</h3>
   <div id="ingredients">
     <%= form.fields_for :ingredients do |ingredient| %>

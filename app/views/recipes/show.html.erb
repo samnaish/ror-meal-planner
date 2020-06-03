@@ -11,8 +11,16 @@
       <div class="recipe__description-container">
         <h3>Description:</h3>
         <p><%= @recipe.description %></p>
-        <span><%= @recipe.time%></span>
-        <span><%= @recipe.timeGroup%></span>
+        <div class="recipe__prep-container">
+          <h4>Prep-Time:</h4>
+          <span><%= @recipe.time%></span>
+          <span><%= @recipe.timeGroup%></span>
+        </div>
+        <div class="recipe__cook-container">
+          <h4>Cook-Time:</h4>
+          <span><%= @recipe.cooktime%></span>
+          <span><%= @recipe.cooktimeGroup %></span>
+        </div>
       </div>
     </div>
 
