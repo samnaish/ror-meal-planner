@@ -276,10 +276,14 @@ strong {
 
 //======================================
 
-.alert-success {
-  padding: 10px 0 0 0;
+.alert-success, .alert {
+  padding: 5px 0 0 0;
   text-align: center;
   background-color: #ffae03;
+}
+
+.alert {
+  color: #610909;
 }
 
 //======================================
@@ -374,6 +378,42 @@ strong {
   background-color: #615d6c;
 }
 
+.signup__link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+//======================================
+
+.signup__caption-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.signup__caption {
+  margin: 5px 0 4px 5px;
+  padding: 2px;
+}
+
+//======================================
+
+.login__link, .signup__link {
+  margin: 5px 0 4px 5px;
+  padding: 2px;
+  text-decoration: none;
+  color: #222222;
+  line-height: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  transition: font-size 0.3s ease;
+}
+
+.login__link:hover, .signup__link:hover {
+  color: $basic-white;
+  font-size: 18px;
+}
 //======================================
 
 .login-page {
@@ -404,6 +444,52 @@ strong {
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
+}
+
+.login__field-checkbox {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  padding: 5px;
+  margin: 10px al5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__field-button {
+  margin: 20px;
+  padding: 10px;
+  width: 45%;
+  height: 36px;
+  background-color: #297373;
+  color: $basic-white;
+  text-decoration: none;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login__field-button:hover {
+  opacity: 0.8;
+  background-color: #615d6c;
+}
+
+.login__links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 //======================================
@@ -529,7 +615,21 @@ strong {
 }
 //======================================
 
+.forgot-password {
+  margin: 5px 0 4px 5px;
+  padding: 2px;
+  text-decoration: none;
+  color: #222222;
+  line-height: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  transition: font-size 0.3s ease;
+}
 
+.forgot-password:hover {
+  color: $basic-white;
+  font-size: 18px;
+}
 
 //======================================
 $footer-color: #7c7287;

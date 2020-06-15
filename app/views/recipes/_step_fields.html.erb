@@ -1,7 +1,7 @@
 <div class="nested-fields">
   <div class="field">
     <%= form.label :direction %>
-    <%= form.text_field :direction %>
+    <%= form.text_field :direction, :required => true %>
     <%= link_to_remove_association "Remove Step", form %>
   </div>
 </div>

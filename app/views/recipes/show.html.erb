@@ -7,7 +7,7 @@
     <h1 class="heading"><%= @recipe.name %></h1>
 
     <div class="recipe__info-container">
-      <%= image_tag @recipe.image.url %>
+      <%= image_tag @recipe.image.url, class: "recipe__image" %>
       <div class="recipe__description-container">
         <h3>Description:</h3>
         <p><%= @recipe.description %></p>

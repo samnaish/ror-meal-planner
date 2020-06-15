@@ -16,7 +16,7 @@
 
     <div class="field">
       <%= form.label :image %>
-      <%= form.file_field :image %>
+      <%= form.file_field :image, :required => true %>
       <% if form.object.image? %>
         <%= image_tag f.object.image.thumb.url %>
         <%= form.label :remove_image %>
@@ -26,12 +26,12 @@
 
     <div class="field">
       <%= form.label :name %>
-      <%= form.text_field :name, class: 'field__content' %>
+      <%= form.text_field :name, class: 'field__content', :required => true %>
     </div>
 
     <div class="field">
       <%= form.label :description %>
-      <%= form.text_area :description, class: 'field__textarea' %>
+      <%= form.text_area :description, class: 'field__textarea', :required => true %>
     </div>
 
     <div class="field">
